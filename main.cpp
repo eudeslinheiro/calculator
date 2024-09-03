@@ -10,6 +10,7 @@ using namespace std;
 
 int a, b, r;
 int main() {
+    cout<<"Dreamer's Calculator V1.0<<endl;
     cout<<"Enter the 1st no.: ";
     cin>>a;
     cout<<"Enter the 2nd no.: ";
