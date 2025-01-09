@@ -10,33 +10,55 @@
 using namespace std;
 
 int main() {
+    int choice;
+    double firstNo, secondNo, result;
     
-    int firstNo, secondNo, result, choice;
-    cout<<"Enter The First No.: ";
-    cin>>firstNo;
-    cout<<"Enter The Second No.: ";
-    cin>>secondNo;
-    cout<<"Which Mathematical Operation Would You Like To Perform? \n1) Addition\n2) Subtraction\n3) Division\n4) Multiplication\nYour Choice: ";
-    cin>>choice;
-    switch(choice){
-        case 1:
-            result=firstNo+secondNo;
-            cout<<"The Result Of The Addiction is: "<<result<<endl;
-            break;
-        case 2:
-            result=firstNo-secondNo;
-            cout<<"The Result Of The Subtraction is: "<<result<<endl;
-            break;
-        case 3:
-            result=firstNo/secondNo;
-            cout<<"The Result Of The Division is: "<<result<<endl;
-            break;
-        case 4:
-            result=firstNo*secondNo;
-            cout<<"The Result Of The Multiplication is: "<<result<<endl;
-            break;
-        default:
-            cout<<"Invalid Choice, Exiting..."<<endl;
+    cout<<"\t\tDreamer's On Calculator v.1.01! \n\n"<<endl;
+    while(true){
+        cout<<"1) Addition\n2) Subtraction\n3) Division\n4) Multiplication\nYour Choice: ";
+        cin>>choice;
+        switch(choice){
+            case 1:
+                cout<<"\nEnter the 1st number: ";
+                cin>>firstNo;
+                cout<<"Enter the 2nd number: ";
+                cin>>secondNo;
+                result = firstNo + secondNo;
+                cout<<"\nThe Result is "<<result<<endl;
+                break;
+            case 2:
+                cout<<"\nEnter the 1st number: ";
+                cin>>firstNo;
+                cout<<"Enter the 2nd number: ";
+                cin>>secondNo;
+                result = firstNo - secondNo;
+                cout<<"\nThe Result is "<<result<<endl;
+                break;
+            case 3:
+                cout<<"\nEnter the 1st number: ";
+                cin>>firstNo;
+                cout<<"Enter the 2nd number: ";
+                cin>>secondNo;
+                if(secondNo == 0){
+                    cout<<"\nError: Cannot divide this number by zero!\n"<<endl;
+                    continue;
+                }
+                result = firstNo / secondNo;
+                cout<<"\nThe Result is "<<result<<endl;
+                break;
+            case 4:
+                cout<<"\nEnter the 1st number: ";
+                cin>>firstNo;
+                cout<<"Enter the 2nd number: ";
+                cin>>secondNo;
+                result = firstNo * secondNo;
+                cout<<"\nThe Result is "<<result<<endl;
+                break;
+            default :
+                cout<<"\nInvalid choice! try again...\n"<<endl;
+                continue;
+        }
     }
     return 0;
 }
+
