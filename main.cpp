@@ -14,7 +14,7 @@ int main() {
     double firstNo, secondNo, result;
     
     cout<<"\t\tDreamer's On Calculator v.1.01! \n\n"<<endl;
-    while(true){
+    do{
         cout<<"1) Addition\n2) Subtraction\n3) Division\n4) Multiplication\nYour Choice: ";
         cin>>choice;
         switch(choice){
@@ -54,11 +54,15 @@ int main() {
                 result = firstNo * secondNo;
                 cout<<"\nThe Result is "<<result<<endl;
                 break;
+            case 5:
+                cout<<"Thanks for using the App!\n";
+                break;
             default :
                 cout<<"\nInvalid choice! try again...\n"<<endl;
                 continue;
         }
-    }
+    } while(true && choice !=5);
+    cout<<"Thanks for using the App!"<<endl;
     return 0;
 }
 
