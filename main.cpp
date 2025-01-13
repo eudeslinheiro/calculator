@@ -55,14 +55,13 @@ int main() {
                 cout<<"\nThe Result is "<<result<<endl;
                 break;
             case 5:
-                cout<<"Thanks for using the App!\n";
+                cout<<"\nThanks for using the App!\n"<<endl;
                 break;
             default :
                 cout<<"\nInvalid choice! try again...\n"<<endl;
                 continue;
         }
     } while(true && choice !=5);
-    cout<<"Thanks for using the App!"<<endl;
     return 0;
 }
 
