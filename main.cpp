@@ -10,7 +10,7 @@ using namespace std;
 
 class getDetails {
    public:
-    int firstNo, secondNo, result;
+    double firstNo, secondNo, result;
     void details(){
         cout<<"\nEnter the 1st No.: ";
         cin>>firstNo;
@@ -21,7 +21,6 @@ class getDetails {
 
 int main() {
     int choice;
-    double firstNo, secondNo, result;
     getDetails obj;
     
     cout<<"\t\tDreamer's On Calculator v.1.01! \n\n"<<endl;
