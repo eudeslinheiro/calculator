@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class getDetails {
@@ -20,25 +21,29 @@ class getDetails {
 };
 
 int main() {
-    int choice;
+    string choice;
     getDetails obj;
     
     cout<<"\t\tDreamer's On Calculator v.1.01! \n\n"<<endl;
     do{
-        cout<<"1) Addition\n2) Subtraction\n3) Division\n4) Multiplication\n5) Exit\nYour Choice: ";
+        cout<<"Enter the operator (+, -, /, * or write exit to close the application) to perform the calculations: ";
         cin>>choice;
-            switch(choice){
-                case 1:
+        if(choice == "exit"){
+           cout<<"\nThanks for using the App!\n"<<endl;
+           break;
+        }
+            switch(choice[0]){
+                case '+':
                     obj.details();
                     obj.result = obj.firstNo + obj.secondNo;
                     cout<<"\nThe Result is "<<obj.result<<endl;
                     break;
-                case 2:
+                case '-':
                     obj.details();
                     obj.result = obj.firstNo - obj.secondNo;
                     cout<<"\nThe Result is "<<obj.result<<endl;
                     break;
-                case 3:
+                case '/':
                     obj.details();
                     if(obj.secondNo == 0){
                         cout<<"\nError: Cannot divide this number by zero!\n"<<endl;
@@ -47,18 +52,15 @@ int main() {
                     obj.result = obj.firstNo / obj.secondNo;
                     cout<<"\nThe Result is "<<obj.result<<endl;
                     break;
-                case 4:
+                case '*':
                     obj.details();
                     obj.result = obj.firstNo * obj.secondNo;
                     cout<<"\nThe Result is "<<obj.result<<endl;
                     break;
-                case 5:
-                    cout<<"\nThanks for using the App!\n"<<endl;
-                    break;
                 default :
-                    cout<<"\nInvalid choice! try again...\n"<<endl;
+                    cout<<"\nInvalid operator! please try again...\n"<<endl;
                     continue;
             }
-    } while(true && choice != 5);
+    } while(true);
     return 0;
 }
