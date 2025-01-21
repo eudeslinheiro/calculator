@@ -36,9 +36,14 @@ class specialOperation{
 };
 
 int main() {
-    string choice;
+    string choice, mode;
     getDetails obj;
     specialOperation ob;
+    cout<<"Which mode do you want to work in?";
+    cin>>mode;
+    if(mode == "n"){
+       cout<<"Hello, It's Just a test";
+    }
     cout<<"\t\tDreamer's On Calculator v.1.01! \n\n"<<endl;
     cout<<"1) Addition\n2) Subtraction\n3) Division\n4) Multiplication\n5) Decimal to Binary conversion\n6) Exit\n\nTo perform any operation enter the sign(+, -, /, *) or write c to convert from Decimal to Binary or exit to close the Application\nYour Choice: ";
     do{
