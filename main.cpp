@@ -94,3 +94,10 @@ int main() {
     return 0;
 }
 
+/*int sqrt, number, oddNumb;
+ cout<<"Enter the no.: ";
+ cin>>number;
+ do{
+   sqrt = number - oddNumb;
+ } while (sqrt != 0);
+ */
